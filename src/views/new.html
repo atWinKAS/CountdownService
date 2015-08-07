@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">                
+            </button>
+            <a class="navbar-brand" href="/">Countdown</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>                
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="text-center">
+        <h1>New Countdown</h1>
+        <p class="lead">Use this form to enter your countdown details...</p>
+    </div>
+
+    {% if message.length > 0 %}
+    <div class="alert alert-danger alert-error">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <form class="form-horizontal" action="create" method="post">
+        <fieldset>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="countdownTitle">Countdown title</label>
+                <div class="col-md-6">
+                    <input class="form-control" id="countdownTitle" name="countdownTitle" />
+                    
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnSave">Save countdown details</label>
+                <div class="col-md-4">
+                    <button id="btnSave" name="btnSave" class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+
+</div><!-- /.container -->
+</body>
+</html>
