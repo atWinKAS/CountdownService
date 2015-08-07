@@ -11,7 +11,8 @@ var routes = require('./routes/index');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB...
-mongoose.connect('mongodb://localhost:27017/countdown');
+//mongoose.connect('mongodb://localhost:27017/countdown');
+mongoose.connect('mongodb://countdownuser:countdownPa44@ds055762.mongolab.com:55762/countdown');
 
 var app = express();
 
